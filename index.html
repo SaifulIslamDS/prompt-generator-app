@@ -2,20 +2,42 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Prompt Generator</title>
+  <title>AI Prompt Generator</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1>🚀 Prompt Generator</h1>
+<div class="container">
+  <h1>🚀 AI Prompt Generator</h1>
+  <p class="subtitle">Generate powerful prompts for any task</p>
 
-<input id="task" placeholder="Task">
-<input id="goal" placeholder="Goal">
-<input id="domain" placeholder="Domain">
+  <div class="form">
 
-<button onclick="generatePrompt()">Generate</button>
+    <input id="task" placeholder="What do you want to do?" />
+    <input id="goal" placeholder="Your goal" />
+    <input id="domain" placeholder="Domain (e.g., Data, Coding)" />
 
-<pre id="output"></pre>
+    <select id="level">
+      <option>Beginner</option>
+      <option>Intermediate</option>
+      <option>Advanced</option>
+    </select>
+
+    <input id="tools" placeholder="Tools (Python, Excel...)" />
+    <input id="constraints" placeholder="Constraints (optional)" />
+    <input id="output" placeholder="Output Type (report, code...)" />
+
+    <label class="checkbox">
+      <input type="checkbox" id="advanced"> Advanced Mode
+    </label>
+
+    <button onclick="generatePrompt()">Generate Prompt</button>
+    <button onclick="copyPrompt()">Copy</button>
+
+  </div>
+
+  <div id="result" class="output"></div>
+</div>
 
 <script src="script.js"></script>
 </body>
